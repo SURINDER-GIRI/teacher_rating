@@ -1,0 +1,75 @@
+	<!-- <md-card>	
+	<h1>SIGN UP</h1>
+
+	<form [formGroup]="userForm" (ngSubmit)="submitUser()">
+		<div>
+		<md-input placeholder="email" type="text" formControlName="email">
+		</md-input>
+		<div *ngIf="userForm.controls['email'].hasError('required') && userForm.controls['email'].touched" class="alert alert-danger"> <span style="color:#f00">Please Enter Email</span></div>
+		</div>
+		<div>
+		
+		<md-input type="password" placeholder="Password" formControlName="password"></md-input>
+		<div *ngIf=" userForm.controls['password'].hasError('required') && userForm.controls['password'].touched" class="alert alert-danger">Please Enter Password</div>
+		</div>
+		<br>
+		<div>	
+		<button color="warn" type="submit" [disabled]="!userForm.valid">Login</button>
+		</div>
+	</form>
+	</md-card> -->
+
+
+
+        <div class="mdl-grid demo-content">
+         <div class=" mdl-cell mdl-cell--12-col mdl-grid">
+			<div class="mdl-card mdl-shadow--6dp form_card">
+			<div class="mdl-card__supporting_text">
+			<form [formGroup]="userForm" (ngSubmit)="submitUser()">
+				<div class="mdl-card__title mdl-color--primary mdl_div_title_rotate">
+		          <h2 class="mdl-card__title-text mdl_txt mdl-color-text--white">Login</h2>
+		          <span class="demo-card-image__filename">
+		            <img src="../../assetsimages/login_logo.png" alt="" class="logo_log_in">
+		          </span>    
+		        </div>
+				
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--6-col-phone">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%;">
+									<input class="mdl-textfield__input" type="text" formControlName="email">
+									<label class="mdl-textfield__label" for="email">Enter Email</label>
+									<i class="material-icons mdl-textfield__label__icon">account_box</i>
+								</div>
+						<div *ngIf="userForm.controls['email'].hasError('required') && userForm.controls['email'].touched" class="alert alert-danger"> <span style="color:#f00">Please Enter Email</span>
+						</div>							
+							</div>
+							<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--6-col-phone">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 90%;">
+									<input class="mdl-textfield__input" type="password" formControlName="password">
+									<label class="mdl-textfield__label" for="password">Password</label>
+									 <i class="material-icons mdl-textfield__label__icon">lock_outline</i>
+								</div>
+							<div *ngIf=" userForm.controls['password'].hasError('required') && userForm.controls['password'].touched" class="alert alert-danger">Please Enter Password</div>
+							</div>
+							<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--6-col-phone">
+								<button type="submit" type="submit" [disabled]="!userForm.valid" class="mdl-button mdl-js-button mdl-cell mdl-cell--12-col mdl-color--primary mdl-color-text--white">Login</button>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">				 
+					<div class="mdl-grid">
+	                   <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone mdl-cell--4-col-tablet">
+	                      <a href="" class="mdl_size">Forgot Password</a>
+	                   </div>
+		               <div class="mdl-cell mdl-cell--6-colright mdl-cell--2-col-phone mdl_margin mdl-cell--4-col-tablet">
+		                  <a href="" class="mdl_size" >Resgisrtation</a>
+		               </div>
+	            	</div>
+				</div>
+					</div>
+			</div>
+			</div>	
+	    
+      

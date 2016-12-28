@@ -1,0 +1,99 @@
+<!-- Accent-colored raised button -->
+<div class="right">
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="logout()">
+    Logout
+  </button>
+</div>
+<div class="">
+	  <form [formGroup]="teacherDetail" (ngSubmit)="submitDetail()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="name" formControlName="name">
+         <label class="mdl-textfield__label" for="text4">Name</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="college" formControlName="college">
+         <label class="mdl-textfield__label" for="text4">College</label>
+      </div>
+     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="qualification"  formControlName="qualification">
+         <label class="mdl-textfield__label" for="text4">Qualification</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="master_subject" formControlName="master_subject">
+         <label class="mdl-textfield__label" for="text4">Master Subject</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="id_proof" formControlName="id_proof">
+         <label class="mdl-textfield__label" for="text4">ID Card N0.</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="contact" name="contact" formControlName="contact">
+        <label class="mdl-textfield__label" for="sample2">Contact</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <textarea class="mdl-textfield__input" type="text" rows="3" maxrows="6"
+         id="schools" formControlName="address" name="address"></textarea>
+        <label class="mdl-textfield__label" for="schools">	Addresss</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <textarea class="mdl-textfield__input" type="text" rows="3" maxrows="6"
+         id="schools" formControlName="professional_skills" name="professional_skills"></textarea>
+        <label class="mdl-textfield__label" for="schools">Professional Skills</label>
+      </div>
+   
+       <div class="mdl-select mdl-js-select mdl-select--floating-label">
+          <label>Experience</label>
+            <select class="mdl-select__input" id="experience" name="experience" formControlName="experience">
+          		 <option value="1"> > 1 Years</option>
+            	 <option value="2"> 1-2 Years</option>
+               <option value="3"> 2-3 Years</option>
+               <option value="4"> 3-4 Years</option>
+               <option value="5"> 4-5 Years</option>
+               <option value="7"> 6-7 Years</option>
+               <option value="8"> 7-8 Years</option>
+               <option value="9" > < 8 </option>
+            </select>
+          <label class="mdl-select__label" for="professsion">Upload Photo</label>
+          <input type="file" id="file" formControlName="photo" name="photo" (change)="onChange($event)">
+          <label for="file" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+            <i class="material-icons">+</i>
+          </label>
+        </div>
+    
+    <div class="mdl-select mdl-js-select mdl-select--floating-label">
+      <label>State </label>
+        <select class="mdl-select__input" id="state" name="state" (change)="onSelect($event.target.value)" formControlName="state" >
+          <option *ngFor=" let state of states" value={{state._id.$oid}}>{{state.name}} 
+          </option> 
+        </select>
+
+        <label>City</label>
+        <select class="mdl-select__input" id="city" name="city" formControlName="city" >
+          <option *ngFor=" let city of cities" value={{city._id.$oid}} >{{city.name}}</option>
+        </select>
+    </div>
+
+    <div>
+   	  <h4>Social Links</h4>
+     	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="social_links" formControlName="social_links" name="social_links">
+         <label class="mdl-textfield__label" for="text4">social Links</label>
+      </div>
+     	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <input class="mdl-textfield__input" type="text" id="text4">
+         <label class="mdl-textfield__label" for="text4">LinkedIn</label>
+      </div>
+     	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <input class="mdl-textfield__input" type="text" id="text4">
+       <label class="mdl-textfield__label" for="text4">Gmail</label>
+      </div>
+    </div>
+    <div class="center">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" [disabled]="!teacherDetail.valid">
+  	  Save
+      </button>
+    </div>
+  </form>
+</div>

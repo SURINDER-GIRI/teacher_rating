@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+  .mdl-card
+    {
+      margin-top:30px;
+    }
+   .mdl_icon
+    {
+      position:absolute;
+      right:-30px;
+      top:26px;
+    }
+   .mdl_button
+     {
+      margin:0px auto 0px 10px;
+     }
+   .mdl_margin
+     {
+      margin-left:8px;
+     }
+   .mdl_div_color
+     {
+      /*background-color:lightblue;*/
+      width:400px;
+      position:relative;
+      top:-20px;
+      left:-10px;
+      height:100px;
+      transform:rotate(-6deg);
+     }
+   .mdl_txt
+     {
+      transform:rotate(5deg);
+      position:relative;
+      left:9px;
+      font-size:35px;
+     }
+   .logo_log_in
+     {
+      width:80px;
+      position:absolute;
+      left:220px;
+      top:40px;
+      border:3px solid #fff;
+      border-radius:50px;
+      transform:rotate(6deg);
+     }
+   .mdl_bttn_color
+     {
+      color:#fff;
+     }
+     .mdl_size
+      {
+        font-size:13px;
+      }
+ul li a
+{
+  font-weight: bold;
+	color: #444;
+	text-decoration:none;
+}
+
+
+.demo-content {
+  max-width:350px;
+}
+.form_card{
+  width: 100%;
+}
+/*......... title.............. */
+.mdl_div_title_rotate
+ {
+  /*background-color:lightblue;*/
+  width:400px;
+  position:relative;
+  top:-20px;
+  left:-10px;
+  height:100px;
+  transform:rotate(-6deg);
+ }
+.mdl_txt
+ {
+  transform:rotate(6deg);
+  position:relative;
+  left:9px;
+  font-size:35px;
+ }
+ .logo_log_in
+ {
+  width:80px;
+  position:absolute;
+  right: 25%;
+  top:45px;
+  border:3px solid #fff;
+  border-radius:50px;
+  transform:rotate(6deg);
+ }
+@media only screen and (max-width: 380px) {
+  .logo_log_in {
+  width: 70px;
+  right: 35%;
+  top:50px;
+  }
+}
+.mdl-textfield__label__icon{
+  position: absolute;
+  right: -30px;
+  top: 20px;
+}
+
+ /*.... upload image end.......... */
+.mdl_size
+{
+font-size:15px;
+text-decoration: none;
+}
+.select
+{
+  width: 100%;
+   border-size: 1px;
+    border-color: #fff #fff #888 #fff;
+    background-color: transparent;
+    transition:all 1s ease-out ;
+}
+
